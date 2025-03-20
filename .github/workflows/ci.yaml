@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  APP_NAME: sketch
+  APP_NAME: service-catalogue
 
 jobs:
   docker-image-push:
