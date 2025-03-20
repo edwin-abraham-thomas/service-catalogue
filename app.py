@@ -56,6 +56,14 @@ HTML_TEMPLATE = """
         .service-url:hover {
             text-decoration: underline;
         }
+        .port-number {
+            background-color: #eaf2f8;
+            border-radius: 3px;
+            padding: 2px 5px;
+            margin-left: 5px;
+            font-size: 0.85em;
+            color: #2471a3;
+        }
         .refresh-btn {
             background-color: #3498db;
             color: white;
@@ -85,6 +93,7 @@ HTML_TEMPLATE = """
         <li class="service-item">
             <span class="service-name">{{ service.name }}</span>
             <span class="service-namespace">({{ service.namespace }})</span>
+            <span class="port-number">Port: {{ service.port }}</span>
             <a href="{{ service.url }}" target="_blank" class="service-url">{{ service.url }}</a>
         </li>
         {% endfor %}
@@ -114,9 +123,13 @@ def get_loadbalancer_services():
                 service_data = {
                     'name': svc.metadata.name,
                     'namespace': svc.metadata.namespace,
+                    'port': port.port,
                     'url': f"http://localserver.local:{port.port}"
                 }
                 loadbalancer_services.append(service_data)
+    
+    # Sort services by port number in descending order
+    loadbalancer_services.sort(key=lambda x: x['port'], reverse=True)
     
     return loadbalancer_services
 
