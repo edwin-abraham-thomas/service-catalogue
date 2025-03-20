@@ -11,7 +11,7 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kubernetes LoadBalancer Services</title>
+    <title>Kubernetes Service Catalog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -83,7 +83,7 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <h1>Kubernetes LoadBalancer Services</h1>
+    <h1>Kubernetes Service Catalog</h1>
     
     <button class="refresh-btn" onclick="window.location.reload()">Refresh</button>
     
