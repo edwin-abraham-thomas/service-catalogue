@@ -19,11 +19,12 @@ HTML_TEMPLATE = """
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            color: #333;
+            color: #e0e0e0;
+            background-color: #1a1a1a;
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
+            color: #ffffff;
+            border-bottom: 2px solid #333;
             padding-bottom: 10px;
         }
         .service-list {
@@ -31,38 +32,40 @@ HTML_TEMPLATE = """
             padding: 0;
         }
         .service-item {
-            background-color: #f9f9f9;
+            background-color: #2d2d2d;
             border-left: 4px solid #3498db;
             margin-bottom: 10px;
             padding: 15px;
             border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         .service-name {
-            color: #2980b9;
+            color: #3498db;
             font-weight: bold;
         }
         .service-namespace {
-            color: #7f8c8d;
+            color: #888;
             font-size: 0.9em;
         }
         .service-url {
             display: block;
             margin-top: 5px;
-            color: #27ae60;
+            color: #2ecc71;
             text-decoration: none;
             font-family: monospace;
             font-size: 1.1em;
         }
         .service-url:hover {
             text-decoration: underline;
+            color: #27ae60;
         }
         .port-number {
-            background-color: #eaf2f8;
+            background-color: #3d3d3d;
             border-radius: 3px;
             padding: 2px 5px;
             margin-left: 5px;
             font-size: 0.85em;
-            color: #2471a3;
+            color: #3498db;
         }
         .refresh-btn {
             background-color: #3498db;
@@ -72,6 +75,7 @@ HTML_TEMPLATE = """
             border-radius: 4px;
             cursor: pointer;
             font-size: 1em;
+            transition: background-color 0.2s;
         }
         .refresh-btn:hover {
             background-color: #2980b9;
