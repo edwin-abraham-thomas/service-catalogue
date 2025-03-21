@@ -26,34 +26,49 @@ HTML_TEMPLATE = """
             color: #ffffff;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .service-list {
-            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 0;
+            justify-content: center;
         }
         .service-item {
             background-color: #2d2d2d;
-            border-left: 4px solid #3498db;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 0 4px 4px 0;
+            border: 1px solid #3498db;
+            margin: 0;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .service-name {
             color: #3498db;
             font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
         }
         .service-namespace {
             color: #888;
             font-size: 0.9em;
+            display: block;
+            margin-bottom: 8px;
         }
         .service-url {
             display: block;
-            margin-top: 5px;
+            margin-top: 10px;
             color: #2ecc71;
             text-decoration: none;
             font-family: monospace;
             font-size: 1.1em;
+            word-break: break-all;
         }
         .service-url:hover {
             text-decoration: underline;
@@ -62,10 +77,11 @@ HTML_TEMPLATE = """
         .port-number {
             background-color: #3d3d3d;
             border-radius: 3px;
-            padding: 2px 5px;
-            margin-left: 5px;
+            padding: 4px 8px;
+            display: inline-block;
             font-size: 0.85em;
             color: #3498db;
+            margin-bottom: 8px;
         }
         .refresh-btn {
             background-color: #3498db;
@@ -76,6 +92,7 @@ HTML_TEMPLATE = """
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.2s;
+            margin-bottom: 20px;
         }
         .refresh-btn:hover {
             background-color: #2980b9;
@@ -83,6 +100,8 @@ HTML_TEMPLATE = """
         .no-services {
             color: #e74c3c;
             font-style: italic;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
